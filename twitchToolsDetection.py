@@ -50,8 +50,6 @@ class TwitchToolsDetection():
         self.channel_soup = ""
 
 
-
-
     def initialize(self):
         """
         Gets the HTML landing page of the streamer and saves it in a soup variable.
@@ -79,6 +77,8 @@ class TwitchToolsDetection():
 
     def findDiscord(channel_soup, channel_name):
         """
+        Finds if the channel has any Discord server.
+        
         Search in the Twitch Channel page for a Discord link. In case the channel doesn't
         has any link it will look for a Discord server using the name of the channel in
         the usual Discord url.
@@ -108,6 +108,8 @@ class TwitchToolsDetection():
 
     def setLogger(self, flag):
         """
+        Sets up a Logger for debugging
+        
         Sets up a logging system for the object which would allow us to inform the
         user if something went wrong or allow other developers to see if everything 
         is working as it should.
